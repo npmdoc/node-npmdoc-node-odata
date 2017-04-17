@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/TossShinHwa/node-odata#readme"
-
-    >node-odata (v0.7.15)</a>
+    <a href="https://github.com/TossShinHwa/node-odata#readme">node-odata (v0.7.15)</a>
 </h1>
 <h4>A module for easily create a REST API based on oData protocol</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.node-odata">module node-odata</a><ol>
 
@@ -2811,7 +2804,7 @@
   this.path = path;
   this.stack = [];
 
-  debug(&#x27;new %s&#x27;, path);
+  debug('new %s', path);
 
   // route handlers for various http methods
   this.methods = {};
@@ -2835,8 +2828,8 @@
 
   var name = method.toLowerCase();
 
-  if (name === &#x27;head&#x27; &#x26;&#x26; !this.methods[&#x27;head&#x27;]) {
-    name = &#x27;get&#x27;;
+  if (name === 'head' &amp;&amp; !this.methods['head']) {
+    name = 'get';
   }
 
   return Boolean(this.methods[name]);
@@ -2857,11 +2850,11 @@
   var methods = Object.keys(this.methods);
 
   // append automatic head
-  if (this.methods.get &#x26;&#x26; !this.methods.head) {
-    methods.push(&#x27;head&#x27;);
+  if (this.methods.get &amp;&amp; !this.methods.head) {
+    methods.push('head');
   }
 
-  for (var i = 0; i &#x3c; methods.length; i++) {
+  for (var i = 0; i &lt; methods.length; i++) {
     // make upper case
     methods[i] = methods[i].toUpperCase();
   }
@@ -2883,18 +2876,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.acl = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -2918,16 +2911,16 @@
     <li>description and source-code<pre class="apidocCodePre">function all() {
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.all() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.all() requires callback functions but got a ' + type;
       throw new TypeError(msg);
     }
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = undefined;
 
     this.methods._all = true;
@@ -2951,18 +2944,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.bind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -2986,18 +2979,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.checkout = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3021,18 +3014,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.connect = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3056,18 +3049,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.copy = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3091,18 +3084,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.delete = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3131,8 +3124,8 @@
   }
 
   var method = req.method.toLowerCase();
-  if (method === &#x27;head&#x27; &#x26;&#x26; !this.methods[&#x27;head&#x27;]) {
-    method = &#x27;get&#x27;;
+  if (method === 'head' &amp;&amp; !this.methods['head']) {
+    method = 'get';
   }
 
   req.route = this;
@@ -3140,7 +3133,7 @@
   next();
 
   function next(err) {
-    if (err &#x26;&#x26; err === &#x27;route&#x27;) {
+    if (err &amp;&amp; err === 'route') {
       return done();
     }
 
@@ -3149,7 +3142,7 @@
       return done(err);
     }
 
-    if (layer.method &#x26;&#x26; layer.method !== method) {
+    if (layer.method &amp;&amp; layer.method !== method) {
       return next(err);
     }
 
@@ -3175,18 +3168,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.get = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3210,18 +3203,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.head = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3245,18 +3238,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.link = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3280,18 +3273,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.lock = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3315,18 +3308,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.m-search = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3350,18 +3343,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.merge = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3385,18 +3378,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.mkactivity = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3420,18 +3413,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.mkcalendar = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3455,18 +3448,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.mkcol = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3490,18 +3483,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.move = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3525,18 +3518,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.notify = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3560,18 +3553,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.options = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3595,18 +3588,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.patch = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3630,18 +3623,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.post = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3665,18 +3658,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.propfind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3700,18 +3693,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.proppatch = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3735,18 +3728,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.purge = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3770,18 +3763,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.put = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3805,18 +3798,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.rebind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3840,18 +3833,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.report = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3875,18 +3868,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.search = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3910,18 +3903,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.subscribe = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3945,18 +3938,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.trace = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3980,18 +3973,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.unbind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -4015,18 +4008,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.unlink = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -4050,18 +4043,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.unlock = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -4085,18 +4078,18 @@
     <li>description and source-code<pre class="apidocCodePre">_express.Route.prototype.unsubscribe = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -4152,12 +4145,12 @@
   var opts = Object.create(options || null);
   var queryparse = qs.parse;
 
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     queryparse = options;
     opts = undefined;
   }
 
-  if (opts !== undefined &#x26;&#x26; opts.allowPrototypes === undefined) {
+  if (opts !== undefined &amp;&amp; opts.allowPrototypes === undefined) {
     // back-compat for qs module
     opts.allowPrototypes = true;
   }
@@ -4185,11 +4178,11 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function serveStatic(root, options) {
   if (!root) {
-    throw new TypeError(&#x27;root path required&#x27;)
+    throw new TypeError('root path required')
   }
 
-  if (typeof root !== &#x27;string&#x27;) {
-    throw new TypeError(&#x27;root path must be a string&#x27;)
+  if (typeof root !== 'string') {
+    throw new TypeError('root path must be a string')
   }
 
   // copy options object
@@ -4204,8 +4197,8 @@
   // headers listener
   var setHeaders = opts.setHeaders
 
-  if (setHeaders &#x26;&#x26; typeof setHeaders !== &#x27;function&#x27;) {
-    throw new TypeError(&#x27;option setHeaders must be function&#x27;)
+  if (setHeaders &amp;&amp; typeof setHeaders !== 'function') {
+    throw new TypeError('option setHeaders must be function')
   }
 
   // setup options for send
@@ -4218,15 +4211,15 @@
     : createNotFoundDirectoryListener()
 
   return function serveStatic (req, res, next) {
-    if (req.method !== &#x27;GET&#x27; &#x26;&#x26; req.method !== &#x27;HEAD&#x27;) {
+    if (req.method !== 'GET' &amp;&amp; req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
       }
 
       // method not allowed
       res.statusCode = 405
-      res.setHeader(&#x27;Allow&#x27;, &#x27;GET, HEAD&#x27;)
-      res.setHeader(&#x27;Content-Length&#x27;, &#x27;0&#x27;)
+      res.setHeader('Allow', 'GET, HEAD')
+      res.setHeader('Content-Length', '0')
       res.end()
       return
     }
@@ -4236,32 +4229,32 @@
     var path = parseUrl(req).pathname
 
     // make sure redirect occurs at mount
-    if (path === &#x27;/&#x27; &#x26;&#x26; originalUrl.pathname.substr(-1) !== &#x27;/&#x27;) {
-      path = &#x27;&#x27;
+    if (path === '/' &amp;&amp; originalUrl.pathname.substr(-1) !== '/') {
+      path = ''
     }
 
     // create send stream
     var stream = send(req, path, opts)
 
     // add directory handler
-    stream.on(&#x27;directory&#x27;, onDirectory)
+    stream.on('directory', onDirectory)
 
     // add headers listener
     if (setHeaders) {
-      stream.on(&#x27;headers&#x27;, setHeaders)
+      stream.on('headers', setHeaders)
     }
 
     // add file listener for fallthrough
     if (fallthrough) {
-      stream.on(&#x27;file&#x27;, function onFile () {
+      stream.on('file', function onFile () {
         // once file is determined, always forward error
         forwardError = true
       })
     }
 
     // forward errors
-    stream.on(&#x27;error&#x27;, function error (err) {
-      if (forwardError || !(err.statusCode &#x3c; 500)) {
+    stream.on('error', function error (err) {
+      if (forwardError || !(err.statusCode &lt; 500)) {
         next(err)
         return
       }
@@ -4353,7 +4346,7 @@
     <li>example usage<pre class="apidocCodePre">...
   }
 }, {
-  key: &#x27;resource&#x27;,
+  key: 'resource',
   value: function resource(name, model) {
     if (model === undefined) {
       return this._resources.name;
@@ -4363,9 +4356,9 @@
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
+    var app = this.get('app');
 ...</pre></li>
     </ul>
 
@@ -4407,7 +4400,7 @@
     <li>example usage<pre class="apidocCodePre">...
   }
 }, {
-  key: &#x27;resource&#x27;,
+  key: 'resource',
   value: function resource(name, model) {
     if (model === undefined) {
       return this._resources.name;
@@ -4417,9 +4410,9 @@
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
+    var app = this.get('app');
 ...</pre></li>
     </ul>
 
@@ -4486,7 +4479,7 @@
   this.path = path;
   this.stack = [];
 
-  debug(&#x27;new %s&#x27;, path);
+  debug('new %s', path);
 
   // route handlers for various http methods
   this.methods = {};
@@ -4524,8 +4517,8 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x22;Cannot call
- a class as a function&#x22;); } }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call
+ a class as a function"); } }
 
 var _default = function _default() {
   _classCallCheck(this, _default);
@@ -4552,12 +4545,12 @@ exports.default = _default;
   var opts = Object.create(options || null);
   var queryparse = qs.parse;
 
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     queryparse = options;
     opts = undefined;
   }
 
-  if (opts !== undefined &#x26;&#x26; opts.allowPrototypes === undefined) {
+  if (opts !== undefined &amp;&amp; opts.allowPrototypes === undefined) {
     // back-compat for qs module
     opts.allowPrototypes = true;
   }
@@ -4581,11 +4574,11 @@ exports.default = function () {
   app.use((0, _methodOverride2.default)());
   app.use(_express2.default.<span class="apidocCodeKeywordSpan">query</span>());
   app.use((0, _cors2.default)());
-  app.disable(&#x27;x-powered-by&#x27;);
+  app.disable('x-powered-by');
   return app;
 };
 
-var _express = require(&#x27;express&#x27;);
+var _express = require('express');
 ...</pre></li>
     </ul>
 
@@ -4600,11 +4593,11 @@ var _express = require(&#x27;express&#x27;);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function serveStatic(root, options) {
   if (!root) {
-    throw new TypeError(&#x27;root path required&#x27;)
+    throw new TypeError('root path required')
   }
 
-  if (typeof root !== &#x27;string&#x27;) {
-    throw new TypeError(&#x27;root path must be a string&#x27;)
+  if (typeof root !== 'string') {
+    throw new TypeError('root path must be a string')
   }
 
   // copy options object
@@ -4619,8 +4612,8 @@ var _express = require(&#x27;express&#x27;);
   // headers listener
   var setHeaders = opts.setHeaders
 
-  if (setHeaders &#x26;&#x26; typeof setHeaders !== &#x27;function&#x27;) {
-    throw new TypeError(&#x27;option setHeaders must be function&#x27;)
+  if (setHeaders &amp;&amp; typeof setHeaders !== 'function') {
+    throw new TypeError('option setHeaders must be function')
   }
 
   // setup options for send
@@ -4633,15 +4626,15 @@ var _express = require(&#x27;express&#x27;);
     : createNotFoundDirectoryListener()
 
   return function serveStatic (req, res, next) {
-    if (req.method !== &#x27;GET&#x27; &#x26;&#x26; req.method !== &#x27;HEAD&#x27;) {
+    if (req.method !== 'GET' &amp;&amp; req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
       }
 
       // method not allowed
       res.statusCode = 405
-      res.setHeader(&#x27;Allow&#x27;, &#x27;GET, HEAD&#x27;)
-      res.setHeader(&#x27;Content-Length&#x27;, &#x27;0&#x27;)
+      res.setHeader('Allow', 'GET, HEAD')
+      res.setHeader('Content-Length', '0')
       res.end()
       return
     }
@@ -4651,32 +4644,32 @@ var _express = require(&#x27;express&#x27;);
     var path = parseUrl(req).pathname
 
     // make sure redirect occurs at mount
-    if (path === &#x27;/&#x27; &#x26;&#x26; originalUrl.pathname.substr(-1) !== &#x27;/&#x27;) {
-      path = &#x27;&#x27;
+    if (path === '/' &amp;&amp; originalUrl.pathname.substr(-1) !== '/') {
+      path = ''
     }
 
     // create send stream
     var stream = send(req, path, opts)
 
     // add directory handler
-    stream.on(&#x27;directory&#x27;, onDirectory)
+    stream.on('directory', onDirectory)
 
     // add headers listener
     if (setHeaders) {
-      stream.on(&#x27;headers&#x27;, setHeaders)
+      stream.on('headers', setHeaders)
     }
 
     // add file listener for fallthrough
     if (fallthrough) {
-      stream.on(&#x27;file&#x27;, function onFile () {
+      stream.on('file', function onFile () {
         // once file is determined, always forward error
         forwardError = true
       })
     }
 
     // forward errors
-    stream.on(&#x27;error&#x27;, function error (err) {
-      if (forwardError || !(err.statusCode &#x3c; 500)) {
+    stream.on('error', function error (err) {
+      if (forwardError || !(err.statusCode &lt; 500)) {
         next(err)
         return
       }
@@ -4715,7 +4708,7 @@ var _express = require(&#x27;express&#x27;);
   this.path = path;
   this.stack = [];
 
-  debug(&#x27;new %s&#x27;, path);
+  debug('new %s', path);
 
   // route handlers for various http methods
   this.methods = {};
@@ -4744,8 +4737,8 @@ var _express = require(&#x27;express&#x27;);
 
   var name = method.toLowerCase();
 
-  if (name === &#x27;head&#x27; &#x26;&#x26; !this.methods[&#x27;head&#x27;]) {
-    name = &#x27;get&#x27;;
+  if (name === 'head' &amp;&amp; !this.methods['head']) {
+    name = 'get';
   }
 
   return Boolean(this.methods[name]);
@@ -4766,11 +4759,11 @@ var _express = require(&#x27;express&#x27;);
   var methods = Object.keys(this.methods);
 
   // append automatic head
-  if (this.methods.get &#x26;&#x26; !this.methods.head) {
-    methods.push(&#x27;head&#x27;);
+  if (this.methods.get &amp;&amp; !this.methods.head) {
+    methods.push('head');
   }
 
-  for (var i = 0; i &#x3c; methods.length; i++) {
+  for (var i = 0; i &lt; methods.length; i++) {
     // make upper case
     methods[i] = methods[i].toUpperCase();
   }
@@ -4792,18 +4785,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">acl = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -4827,16 +4820,16 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">function all() {
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.all() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.all() requires callback functions but got a ' + type;
       throw new TypeError(msg);
     }
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = undefined;
 
     this.methods._all = true;
@@ -4860,18 +4853,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">bind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -4895,18 +4888,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">checkout = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -4930,18 +4923,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">connect = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -4965,18 +4958,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">copy = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5000,18 +4993,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">delete = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5024,11 +5017,11 @@ var _express = require(&#x27;express&#x27;);
     });
   }
 }, {
-  key: &#x27;delete&#x27;,
+  key: 'delete',
   value: function _delete(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">delete</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">delete</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -5056,8 +5049,8 @@ var _express = require(&#x27;express&#x27;);
   }
 
   var method = req.method.toLowerCase();
-  if (method === &#x27;head&#x27; &#x26;&#x26; !this.methods[&#x27;head&#x27;]) {
-    method = &#x27;get&#x27;;
+  if (method === 'head' &amp;&amp; !this.methods['head']) {
+    method = 'get';
   }
 
   req.route = this;
@@ -5065,7 +5058,7 @@ var _express = require(&#x27;express&#x27;);
   next();
 
   function next(err) {
-    if (err &#x26;&#x26; err === &#x27;route&#x27;) {
+    if (err &amp;&amp; err === 'route') {
       return done();
     }
 
@@ -5074,7 +5067,7 @@ var _express = require(&#x27;express&#x27;);
       return done(err);
     }
 
-    if (layer.method &#x26;&#x26; layer.method !== method) {
+    if (layer.method &amp;&amp; layer.method !== method) {
       return next(err);
     }
 
@@ -5100,18 +5093,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">get = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5126,11 +5119,11 @@ var _express = require(&#x27;express&#x27;);
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.<span class="apidocCodeKeywordSpan">get</span>(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.post(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.<span class="apidocCodeKeywordSpan">get</span>('app');
+    var prefix = this.get('prefix');
+    app.post('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -5151,18 +5144,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">head = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5186,18 +5179,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">link = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5221,18 +5214,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">lock = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5256,18 +5249,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">m-search = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5291,18 +5284,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">merge = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5326,18 +5319,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">mkactivity = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5361,18 +5354,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">mkcalendar = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5396,18 +5389,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">mkcol = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5431,18 +5424,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">move = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5466,18 +5459,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">notify = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5501,18 +5494,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">options = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5536,18 +5529,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">patch = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5560,11 +5553,11 @@ var _express = require(&#x27;express&#x27;);
     });
   }
 }, {
-  key: &#x27;patch&#x27;,
+  key: 'patch',
   value: function patch(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">patch</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">patch</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -5587,18 +5580,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">post = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5611,11 +5604,11 @@ var _express = require(&#x27;express&#x27;);
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">post</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">post</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -5638,18 +5631,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">propfind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5673,18 +5666,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">proppatch = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5708,18 +5701,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">purge = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5743,18 +5736,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">put = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5767,11 +5760,11 @@ var _express = require(&#x27;express&#x27;);
     });
   }
 }, {
-  key: &#x27;put&#x27;,
+  key: 'put',
   value: function put(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">put</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">put</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -5794,18 +5787,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">rebind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5829,18 +5822,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">report = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5864,18 +5857,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">search = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5899,18 +5892,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">subscribe = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5934,18 +5927,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">trace = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -5969,18 +5962,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">unbind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6004,18 +5997,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">unlink = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6039,18 +6032,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">unlock = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6074,18 +6067,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">unsubscribe = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6118,8 +6111,8 @@ var _express = require(&#x27;express&#x27;);
 
   var name = method.toLowerCase();
 
-  if (name === &#x27;head&#x27; &#x26;&#x26; !this.methods[&#x27;head&#x27;]) {
-    name = &#x27;get&#x27;;
+  if (name === 'head' &amp;&amp; !this.methods['head']) {
+    name = 'get';
   }
 
   return Boolean(this.methods[name]);
@@ -6145,11 +6138,11 @@ var _express = require(&#x27;express&#x27;);
   var methods = Object.keys(this.methods);
 
   // append automatic head
-  if (this.methods.get &#x26;&#x26; !this.methods.head) {
-    methods.push(&#x27;head&#x27;);
+  if (this.methods.get &amp;&amp; !this.methods.head) {
+    methods.push('head');
   }
 
-  for (var i = 0; i &#x3c; methods.length; i++) {
+  for (var i = 0; i &lt; methods.length; i++) {
     // make upper case
     methods[i] = methods[i].toUpperCase();
   }
@@ -6176,18 +6169,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">acl = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6216,16 +6209,16 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">function all() {
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.all() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.all() requires callback functions but got a ' + type;
       throw new TypeError(msg);
     }
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = undefined;
 
     this.methods._all = true;
@@ -6272,18 +6265,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">checkout = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6312,18 +6305,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">connect = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6352,18 +6345,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">copy = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6392,18 +6385,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">delete = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6416,11 +6409,11 @@ var _express = require(&#x27;express&#x27;);
     });
   }
 }, {
-  key: &#x27;delete&#x27;,
+  key: 'delete',
   value: function _delete(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">delete</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">delete</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -6453,8 +6446,8 @@ var _express = require(&#x27;express&#x27;);
   }
 
   var method = req.method.toLowerCase();
-  if (method === &#x27;head&#x27; &#x26;&#x26; !this.methods[&#x27;head&#x27;]) {
-    method = &#x27;get&#x27;;
+  if (method === 'head' &amp;&amp; !this.methods['head']) {
+    method = 'get';
   }
 
   req.route = this;
@@ -6462,7 +6455,7 @@ var _express = require(&#x27;express&#x27;);
   next();
 
   function next(err) {
-    if (err &#x26;&#x26; err === &#x27;route&#x27;) {
+    if (err &amp;&amp; err === 'route') {
       return done();
     }
 
@@ -6471,7 +6464,7 @@ var _express = require(&#x27;express&#x27;);
       return done(err);
     }
 
-    if (layer.method &#x26;&#x26; layer.method !== method) {
+    if (layer.method &amp;&amp; layer.method !== method) {
       return next(err);
     }
 
@@ -6502,18 +6495,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">get = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6528,11 +6521,11 @@ var _express = require(&#x27;express&#x27;);
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.<span class="apidocCodeKeywordSpan">get</span>(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.post(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.<span class="apidocCodeKeywordSpan">get</span>('app');
+    var prefix = this.get('prefix');
+    app.post('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -6558,18 +6551,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">head = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6598,18 +6591,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">link = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6638,18 +6631,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">lock = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6678,18 +6671,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">m-search = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6718,18 +6711,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">merge = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6758,18 +6751,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">mkactivity = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6798,18 +6791,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">mkcalendar = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6838,18 +6831,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">mkcol = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6878,18 +6871,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">move = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6918,18 +6911,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">notify = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6958,18 +6951,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">options = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -6998,18 +6991,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">patch = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7022,11 +7015,11 @@ var _express = require(&#x27;express&#x27;);
     });
   }
 }, {
-  key: &#x27;patch&#x27;,
+  key: 'patch',
   value: function patch(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">patch</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">patch</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -7054,18 +7047,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">post = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7078,11 +7071,11 @@ var _express = require(&#x27;express&#x27;);
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">post</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">post</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -7110,18 +7103,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">propfind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7150,18 +7143,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">proppatch = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7190,18 +7183,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">purge = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7230,18 +7223,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">put = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7254,11 +7247,11 @@ var _express = require(&#x27;express&#x27;);
     });
   }
 }, {
-  key: &#x27;put&#x27;,
+  key: 'put',
   value: function put(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">put</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">put</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -7286,18 +7279,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">rebind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7326,18 +7319,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">report = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7366,18 +7359,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">search = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7406,18 +7399,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">subscribe = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7446,18 +7439,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">trace = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7486,18 +7479,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">unbind = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7526,18 +7519,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">unlink = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7566,18 +7559,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">unlock = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7606,18 +7599,18 @@ var _express = require(&#x27;express&#x27;);
     <li>description and source-code<pre class="apidocCodePre">unsubscribe = function (){
   var handles = flatten(slice.call(arguments));
 
-  for (var i = 0; i &#x3c; handles.length; i++) {
+  for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &#x27;function&#x27;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &#x27;Route.&#x27; + method + &#x27;() requires callback functions but got a &#x27; + type;
+      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
       throw new Error(msg);
     }
 
-    debug(&#x27;%s %s&#x27;, method, this.path);
+    debug('%s %s', method, this.path);
 
-    var layer = Layer(&#x27;/&#x27;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -7664,8 +7657,8 @@ var _express = require(&#x27;express&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x22;Cannot call
- a class as a function&#x22;); } }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call
+ a class as a function"); } }
 
 var _default = function _default() {
   _classCallCheck(this, _default);
@@ -7799,11 +7792,11 @@ exports.default = _default;
     });
   }
 }, {
-  key: &#x27;delete&#x27;,
+  key: 'delete',
   value: function _delete(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">delete</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">delete</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -7834,11 +7827,11 @@ exports.default = _default;
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.<span class="apidocCodeKeywordSpan">get</span>(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.post(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.<span class="apidocCodeKeywordSpan">get</span>('app');
+    var prefix = this.get('prefix');
+    app.post('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -7859,14 +7852,14 @@ exports.default = _default;
     <li>description and source-code<pre class="apidocCodePre">function handle(req, res, out) {
   var self = this;
 
-  debug(&#x27;dispatching %s %s&#x27;, req.method, req.url);
+  debug('dispatching %s %s', req.method, req.url);
 
-  var search = 1 + req.url.indexOf(&#x27;?&#x27;);
+  var search = 1 + req.url.indexOf('?');
   var pathlength = search ? search - 1 : req.url.length;
-  var fqdn = req.url[0] !== &#x27;/&#x27; &#x26;&#x26; 1 + req.url.substr(0, pathlength).indexOf(&#x27;://&#x27;);
-  var protohost = fqdn ? req.url.substr(0, req.url.indexOf(&#x27;/&#x27;, 2 + fqdn)) : &#x27;&#x27;;
+  var fqdn = req.url[0] !== '/' &amp;&amp; 1 + req.url.substr(0, pathlength).indexOf('://');
+  var protohost = fqdn ? req.url.substr(0, req.url.indexOf('/', 2 + fqdn)) : '';
   var idx = 0;
-  var removed = &#x27;&#x27;;
+  var removed = '';
   var slashAdded = false;
   var paramcalled = {};
 
@@ -7879,14 +7872,14 @@ exports.default = _default;
 
   // manage inter-router variables
   var parentParams = req.params;
-  var parentUrl = req.baseUrl || &#x27;&#x27;;
-  var done = restore(out, req, &#x27;baseUrl&#x27;, &#x27;next&#x27;, &#x27;params&#x27;);
+  var parentUrl = req.baseUrl || '';
+  var done = restore(out, req, 'baseUrl', 'next', 'params');
 
   // setup next layer
   req.next = next;
 
   // for options requests, respond with a default if nothing else responds
-  if (req.method === &#x27;OPTIONS&#x27;) {
+  if (req.method === 'OPTIONS') {
     done = wrap(done, function(old, err) {
       if (err || options.length === 0) return old(err);
       sendOptionsResponse(res, options, old);
@@ -7900,7 +7893,7 @@ exports.default = _default;
   next();
 
   function next(err) {
-    var layerError = err === &#x27;route&#x27;
+    var layerError = err === 'route'
       ? null
       : err;
 
@@ -7914,11 +7907,11 @@ exports.default = _default;
     if (removed.length !== 0) {
       req.baseUrl = parentUrl;
       req.url = protohost + removed + req.url.substr(protohost.length);
-      removed = &#x27;&#x27;;
+      removed = '';
     }
 
     // no more matching layers
-    if (idx &#x3e;= stack.length) {
+    if (idx &gt;= stack.length) {
       setImmediate(done, layerError);
       return;
     }
@@ -7935,12 +7928,12 @@ exports.default = _default;
     var match;
     var route;
 
-    while (match !== true &#x26;&#x26; idx &#x3c; stack.length) {
+    while (match !== true &amp;&amp; idx &lt; stack.length) {
       layer = stack[idx++];
       match = matchLayer(layer, path);
       route = layer.route;
 
-      if (typeof match !== &#x27;boolean&#x27;) {
+      if (typeof match !== 'boolean') {
         // hold on to layerError
         layerError = layerError || match;
       }
@@ -7964,12 +7957,12 @@ exports.default = _default;
       var has_method = route._handles_method(method);
 
       // build up automatic options response
-      if (!has_method &#x26;&#x26; method === &#x27;OPTIONS&#x27;) {
+      if (!has_method &amp;&amp; method === 'OPTIONS') {
         appendMethods(options, route._options());
       }
 
-      // don&#x27;t even bother matching route
-      if (!has_method &#x26;&#x26; method !== &#x27;HEAD&#x27;) {
+      // don't even bother matching route
+      if (!has_method &amp;&amp; method !== 'HEAD') {
         match = false;
         continue;
       }
@@ -8007,18 +8000,18 @@ exports.default = _default;
 
   function trim_prefix(layer, layerError, layerPath, path) {
     var c = path[layerPath.length];
-    if (c &#x26;&#x26; &#x27;/&#x27; !== c &#x26;&#x26; &#x27;.&#x27; !== c) return next(layerError);
+    if (c &amp;&amp; '/' !== c &amp;&amp; '.' !== c) return next(layerError);
 
      // Trim off the part of the url that matches the route
      // middleware (.use stuff) needs to have the path stripped
     if (layerPath.length !== 0) {
-      debug(&#x27;trim prefix (%s) from url %s&#x27;, layerPath, req.url);
+      debug('trim prefix (%s) from url %s', layerPath, req.url);
       removed = layerPath;
       req.url = protohost + req.url.substr(protohost.length + removed.length);
 
       // Ensure leading slash
-      if (!fqdn &#x26;&#x26; req.url[0] !== &#x27;/&#x27;) {
-        req.url = &#x27; ...</pre></li>
+      if (!fqdn &amp;&amp; req.url[0] !== '/') {
+        req.url = ' ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -8220,8 +8213,8 @@ exports.default = _default;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function param(name, fn) {
   // param logic
-  if (typeof name === &#x27;function&#x27;) {
-    deprecate(&#x27;router.param(fn): Refactor to use path params&#x27;);
+  if (typeof name === 'function') {
+    deprecate('router.param(fn): Refactor to use path params');
     this._params.push(name);
     return;
   }
@@ -8231,13 +8224,13 @@ exports.default = _default;
   var len = params.length;
   var ret;
 
-  if (name[0] === &#x27;:&#x27;) {
-    deprecate(&#x27;router.param(&#x27; + JSON.stringify(name) + &#x27;, fn): Use router.param(&#x27; + JSON.stringify(name.substr(1)) + &#x27;, fn) instead
-&#x27;);
+  if (name[0] === ':') {
+    deprecate('router.param(' + JSON.stringify(name) + ', fn): Use router.param(' + JSON.stringify(name.substr(1)) + ', fn) instead
+');
     name = name.substr(1);
   }
 
-  for (var i = 0; i &#x3c; len; ++i) {
+  for (var i = 0; i &lt; len; ++i) {
     if (ret = params[i](name, fn)) {
       fn = ret;
     }
@@ -8245,8 +8238,8 @@ exports.default = _default;
 
   // ensure we end up with a
   // middleware function
-  if (&#x27;function&#x27; !== typeof fn) {
-    throw new Error(&#x27;invalid param() call for &#x27; + name + &#x27;, got &#x27; + fn);
+  if ('function' !== typeof fn) {
+    throw new Error('invalid param() call for ' + name + ', got ' + fn);
   }
 
   (this.params[name] = this.params[name] || []).push(fn);
@@ -8273,11 +8266,11 @@ exports.default = _default;
     });
   }
 }, {
-  key: &#x27;patch&#x27;,
+  key: 'patch',
   value: function patch(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">patch</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">patch</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -8306,11 +8299,11 @@ exports.default = _default;
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">post</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">post</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -8356,7 +8349,7 @@ exports.default = _default;
       return done(err);
     }
 
-    if (i &#x3e;= keys.length ) {
+    if (i &gt;= keys.length ) {
       return done();
     }
 
@@ -8377,8 +8370,8 @@ exports.default = _default;
     }
 
     // param previously called with same value or error occurred
-    if (paramCalled &#x26;&#x26; (paramCalled.match === paramVal
-      || (paramCalled.error &#x26;&#x26; paramCalled.error !== &#x27;route&#x27;))) {
+    if (paramCalled &amp;&amp; (paramCalled.match === paramVal
+      || (paramCalled.error &amp;&amp; paramCalled.error !== 'route'))) {
       // restore value
       req.params[name] = paramCalled.value;
 
@@ -8492,11 +8485,11 @@ exports.default = _default;
     });
   }
 }, {
-  key: &#x27;put&#x27;,
+  key: 'put',
   value: function put(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">put</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">put</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -8697,19 +8690,19 @@ exports.default = _default;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function use(fn) {
   var offset = 0;
-  var path = &#x27;/&#x27;;
+  var path = '/';
 
-  // default path to &#x27;/&#x27;
+  // default path to '/'
   // disambiguate router.use([fn])
-  if (typeof fn !== &#x27;function&#x27;) {
+  if (typeof fn !== 'function') {
     var arg = fn;
 
-    while (Array.isArray(arg) &#x26;&#x26; arg.length !== 0) {
+    while (Array.isArray(arg) &amp;&amp; arg.length !== 0) {
       arg = arg[0];
     }
 
     // first arg is the path
-    if (typeof arg !== &#x27;function&#x27;) {
+    if (typeof arg !== 'function') {
       offset = 1;
       path = fn;
     }
@@ -8718,18 +8711,18 @@ exports.default = _default;
   var callbacks = flatten(slice.call(arguments, offset));
 
   if (callbacks.length === 0) {
-    throw new TypeError(&#x27;Router.use() requires middleware functions&#x27;);
+    throw new TypeError('Router.use() requires middleware functions');
   }
 
-  for (var i = 0; i &#x3c; callbacks.length; i++) {
+  for (var i = 0; i &lt; callbacks.length; i++) {
     var fn = callbacks[i];
 
-    if (typeof fn !== &#x27;function&#x27;) {
-      throw new TypeError(&#x27;Router.use() requires middleware function but got a &#x27; + gettype(fn));
+    if (typeof fn !== 'function') {
+      throw new TypeError('Router.use() requires middleware function but got a ' + gettype(fn));
     }
 
     // add the middleware
-    debug(&#x27;use %s %s&#x27;, path, fn.name || &#x27;&#x3c;anonymous&#x3e;&#x27;);
+    debug('use %s %s', path, fn.name || '&lt;anonymous&gt;');
 
     var layer = new Layer(path, {
       sensitive: this.caseSensitive,
@@ -8746,7 +8739,7 @@ exports.default = _default;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Object.defineProperty(exports, &#x22;__esModule&#x22;, {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -8757,7 +8750,7 @@ exports.default = function () {
   app.use((0, _methodOverride2.default)());
   app.use(_express2.default.query());
   app.use((0, _cors2.default)());
-  app.disable(&#x27;x-powered-by&#x27;);
+  app.disable('x-powered-by');
   return app;
 };
 ...</pre></li>
@@ -8778,7 +8771,7 @@ exports.default = function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">acl = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -8807,7 +8800,7 @@ exports.default = function () {
   var route = this._router.route(path);
   var args = slice.call(arguments, 1);
 
-  for (var i = 0; i &#x3c; methods.length; i++) {
+  for (var i = 0; i &lt; methods.length; i++) {
     route[methods[i]].apply(route, args);
   }
 
@@ -8826,7 +8819,7 @@ exports.default = function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">bind = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -8850,7 +8843,7 @@ exports.default = function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">checkout = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -8874,7 +8867,7 @@ exports.default = function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">connect = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -8898,7 +8891,7 @@ exports.default = function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">copy = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -8922,15 +8915,15 @@ exports.default = function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function defaultConfiguration() {
-  var env = process.env.NODE_ENV || &#x27;development&#x27;;
+  var env = process.env.NODE_ENV || 'development';
 
   // default settings
-  this.enable(&#x27;x-powered-by&#x27;);
-  this.set(&#x27;etag&#x27;, &#x27;weak&#x27;);
-  this.set(&#x27;env&#x27;, env);
-  this.set(&#x27;query parser&#x27;, &#x27;extended&#x27;);
-  this.set(&#x27;subdomain offset&#x27;, 2);
-  this.set(&#x27;trust proxy&#x27;, false);
+  this.enable('x-powered-by');
+  this.set('etag', 'weak');
+  this.set('env', env);
+  this.set('query parser', 'extended');
+  this.set('subdomain offset', 2);
+  this.set('trust proxy', false);
 
   // trust proxy inherit back-compat
   Object.defineProperty(this.settings, trustProxyDefaultSymbol, {
@@ -8938,14 +8931,14 @@ exports.default = function () {
     value: true
   });
 
-  debug(&#x27;booting in %s mode&#x27;, env);
+  debug('booting in %s mode', env);
 
-  this.on(&#x27;mount&#x27;, function onmount(parent) {
+  this.on('mount', function onmount(parent) {
     // inherit trust proxy
     if (this.settings[trustProxyDefaultSymbol] === true
-      &#x26;&#x26; typeof parent.settings[&#x27;trust proxy fn&#x27;] === &#x27;function&#x27;) {
-      delete this.settings[&#x27;trust proxy&#x27;];
-      delete this.settings[&#x27;trust proxy fn&#x27;];
+      &amp;&amp; typeof parent.settings['trust proxy fn'] === 'function') {
+      delete this.settings['trust proxy'];
+      delete this.settings['trust proxy fn'];
     }
 
     // inherit protos
@@ -8959,24 +8952,24 @@ exports.default = function () {
   this.locals = Object.create(null);
 
   // top-most app is mounted at /
-  this.mountpath = &#x27;/&#x27;;
+  this.mountpath = '/';
 
   // default locals
   this.locals.settings = this.settings;
 
   // default configuration
-  this.set(&#x27;view&#x27;, View);
-  this.set(&#x27;views&#x27;, resolve(&#x27;views&#x27;));
-  this.set(&#x27;jsonp callback name&#x27;, &#x27;callback&#x27;);
+  this.set('view', View);
+  this.set('views', resolve('views'));
+  this.set('jsonp callback name', 'callback');
 
-  if (env === &#x27;production&#x27;) {
-    this.enable(&#x27;view cache&#x27;);
+  if (env === 'production') {
+    this.enable('view cache');
   }
 
-  Object.defineProperty(this, &#x27;router&#x27;, {
+  Object.defineProperty(this, 'router', {
     get: function() {
-      throw new Error(&#x27;\&#x27;app.router\&#x27; is deprecated!\nPlease see the 3.x to 4.x migration guide for details on how to update your
- app.&#x27;);
+      throw new Error('\'app.router\' is deprecated!\nPlease see the 3.x to 4.x migration guide for details on how to update your
+ app.');
     }
   });
 }</pre></li>
@@ -8993,7 +8986,7 @@ this.<span class="apidocCodeKeywordSpan">defaultConfiguration</span>(db, prefix)
 // TODO: Infact, resources is a mongooseModel instance, origin name is repositories.
 // Should mix _resources object and resources object: _resources + resource = resources.
 // Encapsulation to a object, separate mognoose, try to use *repository pattern*.
-// 这里也许应该让 resources 支持 odata 查询的, 以方便直接在代码中使用 OData 查询方式来进行数据筛选, 达到隔离 mongo 的效果.
+// è¿™é‡Œä¹Ÿè®¸åº”è¯¥è®© resources æ”¯æŒ odata æŸ¥è¯¢çš„, ä»¥æ–¹ä¾¿ç›´æŽ¥åœ¨ä»£ç&nbsp;ä¸­ä½¿ç”¨ OData æŸ¥è¯¢æ–¹å¼æ¥è¿›è¡Œæ•°æ®ç­›é€‰, è¾¾åˆ°éš”ç¦» mongo çš„æ•ˆæžœ.
 this._resources = [];
 this.resources = {};
 ...</pre></li>
@@ -9009,7 +9002,7 @@ this.resources = {};
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">del = function (arg0) {
-&#x22;use strict&#x22;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -9026,7 +9019,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">delete = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9041,11 +9034,11 @@ return fn.apply(this, arguments)
     });
   }
 }, {
-  key: &#x27;delete&#x27;,
+  key: 'delete',
   value: function _delete(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">delete</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">delete</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -9076,11 +9069,11 @@ exports.default = function () {
   app.use((0, _methodOverride2.default)());
   app.use(_express2.default.query());
   app.use((0, _cors2.default)());
-  app.<span class="apidocCodeKeywordSpan">disable</span>(&#x27;x-powered-by&#x27;);
+  app.<span class="apidocCodeKeywordSpan">disable</span>('x-powered-by');
   return app;
 };
 
-var _express = require(&#x27;express&#x27;);
+var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 ...</pre></li>
@@ -9141,13 +9134,13 @@ var _express2 = _interopRequireDefault(_express);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function engine(ext, fn) {
-  if (typeof fn !== &#x27;function&#x27;) {
-    throw new Error(&#x27;callback function required&#x27;);
+  if (typeof fn !== 'function') {
+    throw new Error('callback function required');
   }
 
   // get file extension
-  var extension = ext[0] !== &#x27;.&#x27;
-    ? &#x27;.&#x27; + ext
+  var extension = ext[0] !== '.'
+    ? '.' + ext
     : ext;
 
   // store engine
@@ -9168,7 +9161,7 @@ var _express2 = _interopRequireDefault(_express);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">get = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9185,11 +9178,11 @@ var _express2 = _interopRequireDefault(_express);
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.<span class="apidocCodeKeywordSpan">get</span>(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.post(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.<span class="apidocCodeKeywordSpan">get</span>('app');
+    var prefix = this.get('prefix');
+    app.post('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -9212,13 +9205,13 @@ var _express2 = _interopRequireDefault(_express);
 
   // final handler
   var done = callback || finalhandler(req, res, {
-    env: this.get(&#x27;env&#x27;),
+    env: this.get('env'),
     onerror: logerror.bind(this)
   });
 
   // no routes
   if (!router) {
-    debug(&#x27;no routes defined on app&#x27;);
+    debug('no routes defined on app');
     done();
     return;
   }
@@ -9238,7 +9231,7 @@ var _express2 = _interopRequireDefault(_express);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">head = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9283,11 +9276,11 @@ var _express2 = _interopRequireDefault(_express);
     <li>description and source-code<pre class="apidocCodePre">function lazyrouter() {
   if (!this._router) {
     this._router = new Router({
-      caseSensitive: this.enabled(&#x27;case sensitive routing&#x27;),
-      strict: this.enabled(&#x27;strict routing&#x27;)
+      caseSensitive: this.enabled('case sensitive routing'),
+      strict: this.enabled('strict routing')
     });
 
-    this._router.use(query(this.get(&#x27;query parser fn&#x27;)));
+    this._router.use(query(this.get('query parser fn')));
     this._router.use(middleware.init(this));
   }
 }</pre></li>
@@ -9304,7 +9297,7 @@ var _express2 = _interopRequireDefault(_express);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">link = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9332,9 +9325,9 @@ var _express2 = _interopRequireDefault(_express);
   return server.listen.apply(server, arguments);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var server = odata(&#x27;mongodb://localhost/my-app&#x27;);
+var server = odata('mongodb://localhost/my-app');
 
-server.resource(&#x27;books&#x27;, {
+server.resource('books', {
   title: String,
   price: Number
 });
@@ -9360,7 +9353,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">lock = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9384,7 +9377,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">m-search = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9408,7 +9401,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">merge = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9432,7 +9425,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">mkactivity = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9456,7 +9449,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">mkcalendar = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9480,7 +9473,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">mkcol = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9504,7 +9497,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">move = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9528,7 +9521,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">notify = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9552,7 +9545,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">options = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9579,7 +9572,7 @@ GET    /books(:id)
   this.lazyrouter();
 
   if (Array.isArray(name)) {
-    for (var i = 0; i &#x3c; name.length; i++) {
+    for (var i = 0; i &lt; name.length; i++) {
       this.param(name[i], fn);
     }
 
@@ -9603,7 +9596,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">patch = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9618,11 +9611,11 @@ GET    /books(:id)
     });
   }
 }, {
-  key: &#x27;patch&#x27;,
+  key: 'patch',
   value: function patch(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">patch</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">patch</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -9645,7 +9638,7 @@ GET    /books(:id)
     <li>description and source-code<pre class="apidocCodePre">function path() {
   return this.parent
     ? this.parent.path() + this.mountpath
-    : &#x27;&#x27;;
+    : '';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -9660,7 +9653,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">post = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9675,11 +9668,11 @@ GET    /books(:id)
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">post</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">post</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -9700,7 +9693,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">propfind = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9724,7 +9717,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">proppatch = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9748,7 +9741,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">purge = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9772,7 +9765,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">put = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9787,11 +9780,11 @@ GET    /books(:id)
     });
   }
 }, {
-  key: &#x27;put&#x27;,
+  key: 'put',
   value: function put(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.<span class="apidocCodeKeywordSpan">put</span>(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.<span class="apidocCodeKeywordSpan">put</span>('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -9812,7 +9805,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">rebind = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9844,7 +9837,7 @@ GET    /books(:id)
   var view;
 
   // support callback function as second arg
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     done = options;
     opts = {};
   }
@@ -9862,7 +9855,7 @@ GET    /books(:id)
 
   // set .cache unless explicitly provided
   if (renderOptions.cache == null) {
-    renderOptions.cache = this.enabled(&#x27;view cache&#x27;);
+    renderOptions.cache = this.enabled('view cache');
   }
 
   // primed cache
@@ -9872,19 +9865,19 @@ GET    /books(:id)
 
   // view
   if (!view) {
-    var View = this.get(&#x27;view&#x27;);
+    var View = this.get('view');
 
     view = new View(name, {
-      defaultEngine: this.get(&#x27;view engine&#x27;),
-      root: this.get(&#x27;views&#x27;),
+      defaultEngine: this.get('view engine'),
+      root: this.get('views'),
       engines: engines
     });
 
     if (!view.path) {
-      var dirs = Array.isArray(view.root) &#x26;&#x26; view.root.length &#x3e; 1
-        ? &#x27;directories &#x22;&#x27; + view.root.slice(0, -1).join(&#x27;&#x22;, &#x22;&#x27;) + &#x27;&#x22; or &#x22;&#x27; + view.root[view.root.length - 1] + &#x27;&#x22;&#x27;
-        : &#x27;directory &#x22;&#x27; + view.root + &#x27;&#x22;&#x27;
-      var err = new Error(&#x27;Failed to lookup view &#x22;&#x27; + name + &#x27;&#x22; in views &#x27; + dirs);
+      var dirs = Array.isArray(view.root) &amp;&amp; view.root.length &gt; 1
+        ? 'directories "' + view.root.slice(0, -1).join('", "') + '" or "' + view.root[view.root.length - 1] + '"'
+        : 'directory "' + view.root + '"'
+      var err = new Error('Failed to lookup view "' + name + '" in views ' + dirs);
       err.view = view;
       return done(err);
     }
@@ -9911,7 +9904,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">report = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9951,7 +9944,7 @@ GET    /books(:id)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">search = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -9980,21 +9973,21 @@ GET    /books(:id)
     return this.settings[setting];
   }
 
-  debug(&#x27;set &#x22;%s&#x22; to %o&#x27;, setting, val);
+  debug('set "%s" to %o', setting, val);
 
   // set value
   this.settings[setting] = val;
 
   // trigger matched settings
   switch (setting) {
-    case &#x27;etag&#x27;:
-      this.set(&#x27;etag fn&#x27;, compileETag(val));
+    case 'etag':
+      this.set('etag fn', compileETag(val));
       break;
-    case &#x27;query parser&#x27;:
-      this.set(&#x27;query parser fn&#x27;, compileQueryParser(val));
+    case 'query parser':
+      this.set('query parser fn', compileQueryParser(val));
       break;
-    case &#x27;trust proxy&#x27;:
-      this.set(&#x27;trust proxy fn&#x27;, compileTrust(val));
+    case 'trust proxy':
+      this.set('trust proxy fn', compileTrust(val));
 
       // trust proxy inherit back-compat
       Object.defineProperty(this.settings, trustProxyDefaultSymbol, {
@@ -10011,16 +10004,16 @@ GET    /books(:id)
 }
 
 _createClass(Server, [{
-  key: &#x27;defaultConfiguration&#x27;,
+  key: 'defaultConfiguration',
   value: function defaultConfiguration(db) {
-    var prefix = arguments.length &#x3c;= 1 || arguments[1] === undefined ? &#x27;&#x27; : arguments[1];
+    var prefix = arguments.length &lt;= 1 || arguments[1] === undefined ? '' : arguments[1];
 
-    this.<span class="apidocCodeKeywordSpan">set</span>(&#x27;app&#x27;, this._app);
-    this.set(&#x27;db&#x27;, db);
-    this.set(&#x27;prefix&#x27;, prefix);
+    this.<span class="apidocCodeKeywordSpan">set</span>('app', this._app);
+    this.set('db', db);
+    this.set('prefix', prefix);
   }
 }, {
-  key: &#x27;resource&#x27;,
+  key: 'resource',
   value: function resource(name, model) {
     if (model === undefined) {
 ...</pre></li>
@@ -10036,7 +10029,7 @@ _createClass(Server, [{
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">subscribe = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -10060,7 +10053,7 @@ _createClass(Server, [{
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">trace = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -10084,7 +10077,7 @@ _createClass(Server, [{
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unbind = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -10108,7 +10101,7 @@ _createClass(Server, [{
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlink = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -10132,7 +10125,7 @@ _createClass(Server, [{
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlock = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -10156,7 +10149,7 @@ _createClass(Server, [{
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unsubscribe = function (path){
-  if (method === &#x27;get&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -10181,19 +10174,19 @@ _createClass(Server, [{
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function use(fn) {
   var offset = 0;
-  var path = &#x27;/&#x27;;
+  var path = '/';
 
-  // default path to &#x27;/&#x27;
+  // default path to '/'
   // disambiguate app.use([fn])
-  if (typeof fn !== &#x27;function&#x27;) {
+  if (typeof fn !== 'function') {
     var arg = fn;
 
-    while (Array.isArray(arg) &#x26;&#x26; arg.length !== 0) {
+    while (Array.isArray(arg) &amp;&amp; arg.length !== 0) {
       arg = arg[0];
     }
 
     // first arg is the path
-    if (typeof arg !== &#x27;function&#x27;) {
+    if (typeof arg !== 'function') {
       offset = 1;
       path = fn;
     }
@@ -10202,7 +10195,7 @@ _createClass(Server, [{
   var fns = flatten(slice.call(arguments, offset));
 
   if (fns.length === 0) {
-    throw new TypeError(&#x27;app.use() requires middleware functions&#x27;);
+    throw new TypeError('app.use() requires middleware functions');
   }
 
   // setup router
@@ -10215,7 +10208,7 @@ _createClass(Server, [{
       return router.use(path, fn);
     }
 
-    debug(&#x27;.use app under %s&#x27;, path);
+    debug('.use app under %s', path);
     fn.mountpath = path;
     fn.parent = this;
 
@@ -10230,14 +10223,14 @@ _createClass(Server, [{
     });
 
     // mounted an app
-    fn.emit(&#x27;mount&#x27;, this);
+    fn.emit('mount', this);
   }, this);
 
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Object.defineProperty(exports, &#x22;__esModule&#x22;, {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -10248,7 +10241,7 @@ exports.default = function () {
   app.use((0, _methodOverride2.default)());
   app.use(_express2.default.query());
   app.use((0, _cors2.default)());
-  app.disable(&#x27;x-powered-by&#x27;);
+  app.disable('x-powered-by');
   return app;
 };
 ...</pre></li>
@@ -10272,12 +10265,12 @@ exports.default = function () {
   var opts = Object.create(options || null);
   var queryparse = qs.parse;
 
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     queryparse = options;
     opts = undefined;
   }
 
-  if (opts !== undefined &#x26;&#x26; opts.allowPrototypes === undefined) {
+  if (opts !== undefined &amp;&amp; opts.allowPrototypes === undefined) {
     // back-compat for qs module
     opts.allowPrototypes = true;
   }
@@ -10301,11 +10294,11 @@ exports.default = function () {
   app.use((0, _methodOverride2.default)());
   app.use(_express2.default.<span class="apidocCodeKeywordSpan">query</span>());
   app.use((0, _cors2.default)());
-  app.disable(&#x27;x-powered-by&#x27;);
+  app.disable('x-powered-by');
   return app;
 };
 
-var _express = require(&#x27;express&#x27;);
+var _express = require('express');
 ...</pre></li>
     </ul>
 
@@ -10340,7 +10333,7 @@ var _express = require(&#x27;express&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">acceptsCharset = function () {
-&#x22;use strict&#x22;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -10373,7 +10366,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">acceptsEncoding = function () {
-&#x22;use strict&#x22;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -10406,7 +10399,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">acceptsLanguage = function () {
-&#x22;use strict&#x22;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -10440,18 +10433,18 @@ return fn.apply(this, arguments)
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function header(name) {
   if (!name) {
-    throw new TypeError(&#x27;name argument is required to req.get&#x27;);
+    throw new TypeError('name argument is required to req.get');
   }
 
-  if (typeof name !== &#x27;string&#x27;) {
-    throw new TypeError(&#x27;name must be a string to req.get&#x27;);
+  if (typeof name !== 'string') {
+    throw new TypeError('name must be a string to req.get');
   }
 
   var lc = name.toLowerCase();
 
   switch (lc) {
-    case &#x27;referer&#x27;:
-    case &#x27;referrer&#x27;:
+    case 'referer':
+    case 'referrer':
       return this.headers.referrer
         || this.headers.referer;
     default:
@@ -10464,11 +10457,11 @@ return fn.apply(this, arguments)
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.<span class="apidocCodeKeywordSpan">get</span>(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.post(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.<span class="apidocCodeKeywordSpan">get</span>('app');
+    var prefix = this.get('prefix');
+    app.post('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -10488,18 +10481,18 @@ return fn.apply(this, arguments)
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function header(name) {
   if (!name) {
-    throw new TypeError(&#x27;name argument is required to req.get&#x27;);
+    throw new TypeError('name argument is required to req.get');
   }
 
-  if (typeof name !== &#x27;string&#x27;) {
-    throw new TypeError(&#x27;name must be a string to req.get&#x27;);
+  if (typeof name !== 'string') {
+    throw new TypeError('name must be a string to req.get');
   }
 
   var lc = name.toLowerCase();
 
   switch (lc) {
-    case &#x27;referer&#x27;:
-    case &#x27;referrer&#x27;:
+    case 'referer':
+    case 'referrer':
       return this.headers.referrer
         || this.headers.referer;
     default:
@@ -10524,7 +10517,7 @@ return fn.apply(this, arguments)
   // support flattened arguments
   if (!Array.isArray(types)) {
     arr = new Array(arguments.length);
-    for (var i = 0; i &#x3c; arr.length; i++) {
+    for (var i = 0; i &lt; arr.length; i++) {
       arr[i] = arguments[i];
     }
   }
@@ -10549,11 +10542,11 @@ return fn.apply(this, arguments)
   var query = this.query || {};
 
   var args = arguments.length === 1
-    ? &#x27;name&#x27;
-    : &#x27;name, default&#x27;;
-  deprecate(&#x27;req.param(&#x27; + args + &#x27;): Use req.params, req.body, or req.query instead&#x27;);
+    ? 'name'
+    : 'name, default';
+  deprecate('req.param(' + args + '): Use req.params, req.body, or req.query instead');
 
-  if (null != params[name] &#x26;&#x26; params.hasOwnProperty(name)) return params[name];
+  if (null != params[name] &amp;&amp; params.hasOwnProperty(name)) return params[name];
   if (null != body[name]) return body[name];
   if (null != query[name]) return query[name];
 
@@ -10572,7 +10565,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function range(size, options) {
-  var range = this.get(&#x27;Range&#x27;);
+  var range = this.get('Range');
   if (!range) return;
   return parseRange(size, range, options);
 }</pre></li>
@@ -10623,7 +10616,7 @@ return fn.apply(this, arguments)
     this.type(extname(filename));
   }
 
-  this.set(&#x27;Content-Disposition&#x27;, contentDisposition(filename));
+  this.set('Content-Disposition', contentDisposition(filename));
 
   return this;
 }</pre></li>
@@ -10640,9 +10633,9 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function clearCookie(name, options) {
-  var opts = merge({ expires: new Date(1), path: &#x27;/&#x27; }, options);
+  var opts = merge({ expires: new Date(1), path: '/' }, options);
 
-  return this.cookie(name, &#x27;&#x27;, opts);
+  return this.cookie(name, '', opts);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -10657,11 +10650,11 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function contentType(type) {
-  var ct = type.indexOf(&#x27;/&#x27;) === -1
+  var ct = type.indexOf('/') === -1
     ? mime.lookup(type)
     : type;
 
-  return this.set(&#x27;Content-Type&#x27;, ct);
+  return this.set('Content-Type', ct);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -10680,28 +10673,28 @@ return fn.apply(this, arguments)
   var secret = this.req.secret;
   var signed = opts.signed;
 
-  if (signed &#x26;&#x26; !secret) {
-    throw new Error(&#x27;cookieParser(&#x22;secret&#x22;) required for signed cookies&#x27;);
+  if (signed &amp;&amp; !secret) {
+    throw new Error('cookieParser("secret") required for signed cookies');
   }
 
-  var val = typeof value === &#x27;object&#x27;
-    ? &#x27;j:&#x27; + JSON.stringify(value)
+  var val = typeof value === 'object'
+    ? 'j:' + JSON.stringify(value)
     : String(value);
 
   if (signed) {
-    val = &#x27;s:&#x27; + sign(val, secret);
+    val = 's:' + sign(val, secret);
   }
 
-  if (&#x27;maxAge&#x27; in opts) {
+  if ('maxAge' in opts) {
     opts.expires = new Date(Date.now() + opts.maxAge);
     opts.maxAge /= 1000;
   }
 
   if (opts.path == null) {
-    opts.path = &#x27;/&#x27;;
+    opts.path = '/';
   }
 
-  this.append(&#x27;Set-Cookie&#x27;, cookie.serialize(name, String(val), opts));
+  this.append('Set-Cookie', cookie.serialize(name, String(val), opts));
 
   return this;
 }</pre></li>
@@ -10722,14 +10715,14 @@ return fn.apply(this, arguments)
   var name = filename;
 
   // support function as second arg
-  if (typeof filename === &#x27;function&#x27;) {
+  if (typeof filename === 'function') {
     done = filename;
     name = null;
   }
 
   // set Content-Disposition when file is sent
   var headers = {
-    &#x27;Content-Disposition&#x27;: contentDisposition(name || path)
+    'Content-Disposition': contentDisposition(name || path)
   };
 
   // Resolve the full path for sendFile
@@ -10757,19 +10750,19 @@ return fn.apply(this, arguments)
   if (fn) delete obj.default;
   var keys = Object.keys(obj);
 
-  var key = keys.length &#x3e; 0
+  var key = keys.length &gt; 0
     ? req.accepts(keys)
     : false;
 
-  this.vary(&#x22;Accept&#x22;);
+  this.vary("Accept");
 
   if (key) {
-    this.set(&#x27;Content-Type&#x27;, normalizeType(key).value);
+    this.set('Content-Type', normalizeType(key).value);
     obj[key](req, this, next);
   } else if (fn) {
     fn();
   } else {
-    var err = new Error(&#x27;Not Acceptable&#x27;);
+    var err = new Error('Not Acceptable');
     err.status = err.statusCode = 406;
     err.types = normalizeTypes(keys).map(function(o){ return o.value });
     next(err);
@@ -10798,11 +10791,11 @@ return fn.apply(this, arguments)
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.<span class="apidocCodeKeywordSpan">get</span>(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.post(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.<span class="apidocCodeKeywordSpan">get</span>('app');
+    var prefix = this.get('prefix');
+    app.post('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -10827,9 +10820,9 @@ return fn.apply(this, arguments)
       : String(val);
 
     // add charset to content-type
-    if (field.toLowerCase() === &#x27;content-type&#x27; &#x26;&#x26; !charsetRegExp.test(value)) {
-      var charset = mime.charsets.lookup(value.split(&#x27;;&#x27;)[0]);
-      if (charset) value += &#x27;; charset=&#x27; + charset.toLowerCase();
+    if (field.toLowerCase() === 'content-type' &amp;&amp; !charsetRegExp.test(value)) {
+      var charset = mime.charsets.lookup(value.split(';')[0]);
+      if (charset) value += '; charset=' + charset.toLowerCase();
     }
 
     this.setHeader(field, value);
@@ -10858,11 +10851,11 @@ return fn.apply(this, arguments)
   // allow status / body
   if (arguments.length === 2) {
     // res.json(body, status) backwards compat
-    if (typeof arguments[1] === &#x27;number&#x27;) {
-      deprecate(&#x27;res.json(obj, status): Use res.status(status).json(obj) instead&#x27;);
+    if (typeof arguments[1] === 'number') {
+      deprecate('res.json(obj, status): Use res.status(status).json(obj) instead');
       this.statusCode = arguments[1];
     } else {
-      deprecate(&#x27;res.json(status, obj): Use res.status(status).json(obj) instead&#x27;);
+      deprecate('res.json(status, obj): Use res.status(status).json(obj) instead');
       this.statusCode = arguments[0];
       val = arguments[1];
     }
@@ -10870,19 +10863,19 @@ return fn.apply(this, arguments)
 
   // settings
   var app = this.app;
-  var replacer = app.get(&#x27;json replacer&#x27;);
-  var spaces = app.get(&#x27;json spaces&#x27;);
+  var replacer = app.get('json replacer');
+  var spaces = app.get('json spaces');
   var body = stringify(val, replacer, spaces);
 
   // content-type
-  if (!this.get(&#x27;Content-Type&#x27;)) {
-    this.set(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
+  if (!this.get('Content-Type')) {
+    this.set('Content-Type', 'application/json');
   }
 
   return this.send(body);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-Object.defineProperty(exports, &#x22;__esModule&#x22;, {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -10893,7 +10886,7 @@ exports.default = function () {
   app.use((0, _methodOverride2.default)());
   app.use(_express2.default.query());
   app.use((0, _cors2.default)());
-  app.disable(&#x27;x-powered-by&#x27;);
+  app.disable('x-powered-by');
   return app;
 };
 ...</pre></li>
@@ -10914,11 +10907,11 @@ exports.default = function () {
   // allow status / body
   if (arguments.length === 2) {
     // res.json(body, status) backwards compat
-    if (typeof arguments[1] === &#x27;number&#x27;) {
-      deprecate(&#x27;res.jsonp(obj, status): Use res.status(status).json(obj) instead&#x27;);
+    if (typeof arguments[1] === 'number') {
+      deprecate('res.jsonp(obj, status): Use res.status(status).json(obj) instead');
       this.statusCode = arguments[1];
     } else {
-      deprecate(&#x27;res.jsonp(status, obj): Use res.status(status).jsonp(obj) instead&#x27;);
+      deprecate('res.jsonp(status, obj): Use res.status(status).jsonp(obj) instead');
       this.statusCode = arguments[0];
       val = arguments[1];
     }
@@ -10926,15 +10919,15 @@ exports.default = function () {
 
   // settings
   var app = this.app;
-  var replacer = app.get(&#x27;json replacer&#x27;);
-  var spaces = app.get(&#x27;json spaces&#x27;);
+  var replacer = app.get('json replacer');
+  var spaces = app.get('json spaces');
   var body = stringify(val, replacer, spaces);
-  var callback = this.req.query[app.get(&#x27;jsonp callback name&#x27;)];
+  var callback = this.req.query[app.get('jsonp callback name')];
 
   // content-type
-  if (!this.get(&#x27;Content-Type&#x27;)) {
-    this.set(&#x27;X-Content-Type-Options&#x27;, &#x27;nosniff&#x27;);
-    this.set(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
+  if (!this.get('Content-Type')) {
+    this.set('X-Content-Type-Options', 'nosniff');
+    this.set('Content-Type', 'application/json');
   }
 
   // fixup callback
@@ -10943,22 +10936,22 @@ exports.default = function () {
   }
 
   // jsonp
-  if (typeof callback === &#x27;string&#x27; &#x26;&#x26; callback.length !== 0) {
-    this.charset = &#x27;utf-8&#x27;;
-    this.set(&#x27;X-Content-Type-Options&#x27;, &#x27;nosniff&#x27;);
-    this.set(&#x27;Content-Type&#x27;, &#x27;text/javascript&#x27;);
+  if (typeof callback === 'string' &amp;&amp; callback.length !== 0) {
+    this.charset = 'utf-8';
+    this.set('X-Content-Type-Options', 'nosniff');
+    this.set('Content-Type', 'text/javascript');
 
     // restrict callback charset
-    callback = callback.replace(/[^\[\]\w$.]/g, &#x27;&#x27;);
+    callback = callback.replace(/[^\[\]\w$.]/g, '');
 
     // replace chars not allowed in JavaScript that are in JSON
     body = body
-      .replace(/\u2028/g, &#x27;\\u2028&#x27;)
-      .replace(/\u2029/g, &#x27;\\u2029&#x27;);
+      .replace(/\u2028/g, '\\u2028')
+      .replace(/\u2029/g, '\\u2029');
 
-    // the /**/ is a specific security mitigation for &#x22;Rosetta Flash JSONP abuse&#x22;
+    // the /**/ is a specific security mitigation for "Rosetta Flash JSONP abuse"
     // the typeof check is just to reduce client error noise
-    body = &#x27;/**/ typeof &#x27; + callback + &#x27; === \&#x27;function\&#x27; &#x26;&#x26; &#x27; + callback + &#x27;(&#x27; + body + &#x27;);&#x27;;
+    body = '/**/ typeof ' + callback + ' === \'function\' &amp;&amp; ' + callback + '(' + body + ');';
   }
 
   return this.send(body);
@@ -10976,11 +10969,11 @@ exports.default = function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">links = function (links){
-  var link = this.get(&#x27;Link&#x27;) || &#x27;&#x27;;
-  if (link) link += &#x27;, &#x27;;
-  return this.set(&#x27;Link&#x27;, link + Object.keys(links).map(function(rel){
-    return &#x27;&#x3c;&#x27; + links[rel] + &#x27;&#x3e;; rel=&#x22;&#x27; + rel + &#x27;&#x22;&#x27;;
-  }).join(&#x27;, &#x27;));
+  var link = this.get('Link') || '';
+  if (link) link += ', ';
+  return this.set('Link', link + Object.keys(links).map(function(rel){
+    return '&lt;' + links[rel] + '&gt;; rel="' + rel + '"';
+  }).join(', '));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -10997,13 +10990,13 @@ exports.default = function () {
     <li>description and source-code<pre class="apidocCodePre">function location(url) {
   var loc = url;
 
-  // &#x22;back&#x22; is an alias for the referrer
-  if (url === &#x27;back&#x27;) {
-    loc = this.req.get(&#x27;Referrer&#x27;) || &#x27;/&#x27;;
+  // "back" is an alias for the referrer
+  if (url === 'back') {
+    loc = this.req.get('Referrer') || '/';
   }
 
   // set location
-  return this.set(&#x27;Location&#x27;, encodeUrl(loc));
+  return this.set('Location', encodeUrl(loc));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -11024,39 +11017,39 @@ exports.default = function () {
 
   // allow status / url
   if (arguments.length === 2) {
-    if (typeof arguments[0] === &#x27;number&#x27;) {
+    if (typeof arguments[0] === 'number') {
       status = arguments[0];
       address = arguments[1];
     } else {
-      deprecate(&#x27;res.redirect(url, status): Use res.redirect(status, url) instead&#x27;);
+      deprecate('res.redirect(url, status): Use res.redirect(status, url) instead');
       status = arguments[1];
     }
   }
 
   // Set location header
-  address = this.location(address).get(&#x27;Location&#x27;);
+  address = this.location(address).get('Location');
 
   // Support text/{plain,html} by default
   this.format({
     text: function(){
-      body = statusCodes[status] + &#x27;. Redirecting to &#x27; + address;
+      body = statusCodes[status] + '. Redirecting to ' + address;
     },
 
     html: function(){
       var u = escapeHtml(address);
-      body = &#x27;&#x3c;p&#x3e;&#x27; + statusCodes[status] + &#x27;. Redirecting to &#x3c;a href=&#x22;&#x27; + u + &#x27;&#x22;&#x3e;&#x27; + u + &#x27;&#x3c;/a&#x3e;&#x3c;/p&#x3e;&#x27;;
+      body = '&lt;p&gt;' + statusCodes[status] + '. Redirecting to &lt;a href="' + u + '"&gt;' + u + '&lt;/a&gt;&lt;/p&gt;';
     },
 
     default: function(){
-      body = &#x27;&#x27;;
+      body = '';
     }
   });
 
   // Respond
   this.statusCode = status;
-  this.set(&#x27;Content-Length&#x27;, Buffer.byteLength(body));
+  this.set('Content-Length', Buffer.byteLength(body));
 
-  if (this.req.method === &#x27;HEAD&#x27;) {
+  if (this.req.method === 'HEAD') {
     this.end();
   } else {
     this.end(body);
@@ -11082,7 +11075,7 @@ exports.default = function () {
   var self = this;
 
   // support callback function as second arg
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     done = options;
     opts = {};
   }
@@ -11124,43 +11117,43 @@ exports.default = function () {
   // allow status / body
   if (arguments.length === 2) {
     // res.send(body, status) backwards compat
-    if (typeof arguments[0] !== &#x27;number&#x27; &#x26;&#x26; typeof arguments[1] === &#x27;number&#x27;) {
-      deprecate(&#x27;res.send(body, status): Use res.status(status).send(body) instead&#x27;);
+    if (typeof arguments[0] !== 'number' &amp;&amp; typeof arguments[1] === 'number') {
+      deprecate('res.send(body, status): Use res.status(status).send(body) instead');
       this.statusCode = arguments[1];
     } else {
-      deprecate(&#x27;res.send(status, body): Use res.status(status).send(body) instead&#x27;);
+      deprecate('res.send(status, body): Use res.status(status).send(body) instead');
       this.statusCode = arguments[0];
       chunk = arguments[1];
     }
   }
 
   // disambiguate res.send(status) and res.send(status, num)
-  if (typeof chunk === &#x27;number&#x27; &#x26;&#x26; arguments.length === 1) {
+  if (typeof chunk === 'number' &amp;&amp; arguments.length === 1) {
     // res.send(status) will set status message as text string
-    if (!this.get(&#x27;Content-Type&#x27;)) {
-      this.type(&#x27;txt&#x27;);
+    if (!this.get('Content-Type')) {
+      this.type('txt');
     }
 
-    deprecate(&#x27;res.send(status): Use res.sendStatus(status) instead&#x27;);
+    deprecate('res.send(status): Use res.sendStatus(status) instead');
     this.statusCode = chunk;
     chunk = statusCodes[chunk];
   }
 
   switch (typeof chunk) {
     // string defaulting to html
-    case &#x27;string&#x27;:
-      if (!this.get(&#x27;Content-Type&#x27;)) {
-        this.type(&#x27;html&#x27;);
+    case 'string':
+      if (!this.get('Content-Type')) {
+        this.type('html');
       }
       break;
-    case &#x27;boolean&#x27;:
-    case &#x27;number&#x27;:
-    case &#x27;object&#x27;:
+    case 'boolean':
+    case 'number':
+    case 'object':
       if (chunk === null) {
-        chunk = &#x27;&#x27;;
+        chunk = '';
       } else if (Buffer.isBuffer(chunk)) {
-        if (!this.get(&#x27;Content-Type&#x27;)) {
-          this.type(&#x27;bin&#x27;);
+        if (!this.get('Content-Type')) {
+          this.type('bin');
         }
       } else {
         return this.json(chunk);
@@ -11169,13 +11162,13 @@ exports.default = function () {
   }
 
   // write strings in utf-8
-  if (typeof chunk === &#x27;string&#x27;) {
-    encoding = &#x27;utf8&#x27;;
-    type = this.get(&#x27;Content-Type&#x27;);
+  if (typeof chunk === 'string') {
+    encoding = 'utf8';
+    type = this.get('Content-Type');
 
     // reflect this in content-type
-    if (typeof type === &#x27;string&#x27;) {
-      this.set(&#x27;Content-Type&#x27;, setCharset(type, &#x27;utf-8&#x27;));
+    if (typeof type === 'string') {
+      this.set('Content-Type', setCharset(type, 'utf-8'));
     }
   }
 
@@ -11188,15 +11181,15 @@ exports.default = function () {
     }
 
     len = chunk.length;
-    this.set(&#x27;Content-Length&#x27;, len);
+    this.set('Content-Length', len);
   }
 
   // populate ETag
   var etag;
-  var generateETag = len !== undefined &#x26;&#x26; app.get(&#x27;etag fn&#x27;);
-  if (typeof generateETag === &#x27;function&#x27; &#x26;&#x26; !this.get(&#x27;ETag&#x27;)) {
+  var generateETag = len !== undefined &amp;&amp; app.get('etag fn');
+  if (typeof generateETag === 'function' &amp;&amp; !this.get('ETag')) {
     if ((etag = generateETag(chunk, encoding))) {
-      this.set(&#x27;ETag&#x27;, etag);
+      this.set('ETag', etag);
     }
   }
 
@@ -11205,13 +11198,13 @@ exports.default = function () {
 
   // strip irrelevant headers
   if (204 === this.statusCode || 304 === this.statusCode) {
-    this.removeHeader(&#x27;Content-Type&#x27;);
-    this.removeHeader(&#x27;Content-Length&#x27;);
-    this.removeHeader(&#x27;Transfer-Encoding&#x27;);
-    chunk = &#x27;&#x27;;
+    this.removeHeader('Content-Type');
+    this.removeHeader('Content-Length');
+    this.removeHeader('Transfer-Encoding');
+    chunk = '';
   }
 
-  if (req.method === &#x27;HEAD&#x27;) {
+  if (req.method === 'HEAD') {
     // skip body for HEAD
     this.end();
   } else {
@@ -11241,17 +11234,17 @@ exports.default = function () {
   var opts = options || {};
 
   if (!path) {
-    throw new TypeError(&#x27;path argument is required to res.sendFile&#x27;);
+    throw new TypeError('path argument is required to res.sendFile');
   }
 
   // support function as second arg
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     done = options;
     opts = {};
   }
 
-  if (!opts.root &#x26;&#x26; !isAbsolute(path)) {
-    throw new TypeError(&#x27;path must be absolute or specify root to res.sendFile&#x27;);
+  if (!opts.root &amp;&amp; !isAbsolute(path)) {
+    throw new TypeError('path must be absolute or specify root to res.sendFile');
   }
 
   // create file stream
@@ -11261,10 +11254,10 @@ exports.default = function () {
   // transfer
   sendfile(res, file, opts, function (err) {
     if (done) return done(err);
-    if (err &#x26;&#x26; err.code === &#x27;EISDIR&#x27;) return next();
+    if (err &amp;&amp; err.code === 'EISDIR') return next();
 
     // next() all but write errors
-    if (err &#x26;&#x26; err.code !== &#x27;ECONNABORTED&#x27; &#x26;&#x26; err.syscall !== &#x27;write&#x27;) {
+    if (err &amp;&amp; err.code !== 'ECONNABORTED' &amp;&amp; err.syscall !== 'write') {
       next(err);
     }
   });
@@ -11285,7 +11278,7 @@ exports.default = function () {
   var body = statusCodes[statusCode] || String(statusCode);
 
   this.statusCode = statusCode;
-  this.type(&#x27;txt&#x27;);
+  this.type('txt');
 
   return this.send(body);
 }</pre></li>
@@ -11302,7 +11295,7 @@ exports.default = function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">sendfile = function (arg0, arg1, arg2) {
-&#x22;use strict&#x22;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -11325,9 +11318,9 @@ return fn.apply(this, arguments)
       : String(val);
 
     // add charset to content-type
-    if (field.toLowerCase() === &#x27;content-type&#x27; &#x26;&#x26; !charsetRegExp.test(value)) {
-      var charset = mime.charsets.lookup(value.split(&#x27;;&#x27;)[0]);
-      if (charset) value += &#x27;; charset=&#x27; + charset.toLowerCase();
+    if (field.toLowerCase() === 'content-type' &amp;&amp; !charsetRegExp.test(value)) {
+      var charset = mime.charsets.lookup(value.split(';')[0]);
+      if (charset) value += '; charset=' + charset.toLowerCase();
     }
 
     this.setHeader(field, value);
@@ -11342,16 +11335,16 @@ return fn.apply(this, arguments)
 }
 
 _createClass(Server, [{
-  key: &#x27;defaultConfiguration&#x27;,
+  key: 'defaultConfiguration',
   value: function defaultConfiguration(db) {
-    var prefix = arguments.length &#x3c;= 1 || arguments[1] === undefined ? &#x27;&#x27; : arguments[1];
+    var prefix = arguments.length &lt;= 1 || arguments[1] === undefined ? '' : arguments[1];
 
-    this.<span class="apidocCodeKeywordSpan">set</span>(&#x27;app&#x27;, this._app);
-    this.set(&#x27;db&#x27;, db);
-    this.set(&#x27;prefix&#x27;, prefix);
+    this.<span class="apidocCodeKeywordSpan">set</span>('app', this._app);
+    this.set('db', db);
+    this.set('prefix', prefix);
   }
 }, {
-  key: &#x27;resource&#x27;,
+  key: 'resource',
   value: function resource(name, model) {
     if (model === undefined) {
 ...</pre></li>
@@ -11372,9 +11365,9 @@ _createClass(Server, [{
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   value: function post(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
-    var prefix = this.get(&#x27;prefix&#x27;);
-    app.post(&#x27;&#x27; + prefix + url, function (req, res, next) {
+    var app = this.get('app');
+    var prefix = this.get('prefix');
+    app.post('' + prefix + url, function (req, res, next) {
       if (checkAuth(auth, req)) {
         callback(req, res, next);
       } else {
@@ -11383,9 +11376,9 @@ _createClass(Server, [{
     });
   }
 }, {
-  key: &#x27;put&#x27;,
+  key: 'put',
   value: function put(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
+    var app = this.get('app');
 ...</pre></li>
     </ul>
 
@@ -11399,11 +11392,11 @@ _createClass(Server, [{
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function contentType(type) {
-  var ct = type.indexOf(&#x27;/&#x27;) === -1
+  var ct = type.indexOf('/') === -1
     ? mime.lookup(type)
     : type;
 
-  return this.set(&#x27;Content-Type&#x27;, ct);
+  return this.set('Content-Type', ct);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -11419,8 +11412,8 @@ _createClass(Server, [{
     <ul>
     <li>description and source-code<pre class="apidocCodePre">vary = function (field){
   // checks for back-compat
-  if (!field || (Array.isArray(field) &#x26;&#x26; !field.length)) {
-    deprecate(&#x27;res.vary(): Provide a field name&#x27;);
+  if (!field || (Array.isArray(field) &amp;&amp; !field.length)) {
+    deprecate('res.vary(): Provide a field name');
     return this;
   }
 
@@ -11447,11 +11440,11 @@ _createClass(Server, [{
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function serveStatic(root, options) {
   if (!root) {
-    throw new TypeError(&#x27;root path required&#x27;)
+    throw new TypeError('root path required')
   }
 
-  if (typeof root !== &#x27;string&#x27;) {
-    throw new TypeError(&#x27;root path must be a string&#x27;)
+  if (typeof root !== 'string') {
+    throw new TypeError('root path must be a string')
   }
 
   // copy options object
@@ -11466,8 +11459,8 @@ _createClass(Server, [{
   // headers listener
   var setHeaders = opts.setHeaders
 
-  if (setHeaders &#x26;&#x26; typeof setHeaders !== &#x27;function&#x27;) {
-    throw new TypeError(&#x27;option setHeaders must be function&#x27;)
+  if (setHeaders &amp;&amp; typeof setHeaders !== 'function') {
+    throw new TypeError('option setHeaders must be function')
   }
 
   // setup options for send
@@ -11480,15 +11473,15 @@ _createClass(Server, [{
     : createNotFoundDirectoryListener()
 
   return function serveStatic (req, res, next) {
-    if (req.method !== &#x27;GET&#x27; &#x26;&#x26; req.method !== &#x27;HEAD&#x27;) {
+    if (req.method !== 'GET' &amp;&amp; req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
       }
 
       // method not allowed
       res.statusCode = 405
-      res.setHeader(&#x27;Allow&#x27;, &#x27;GET, HEAD&#x27;)
-      res.setHeader(&#x27;Content-Length&#x27;, &#x27;0&#x27;)
+      res.setHeader('Allow', 'GET, HEAD')
+      res.setHeader('Content-Length', '0')
       res.end()
       return
     }
@@ -11498,32 +11491,32 @@ _createClass(Server, [{
     var path = parseUrl(req).pathname
 
     // make sure redirect occurs at mount
-    if (path === &#x27;/&#x27; &#x26;&#x26; originalUrl.pathname.substr(-1) !== &#x27;/&#x27;) {
-      path = &#x27;&#x27;
+    if (path === '/' &amp;&amp; originalUrl.pathname.substr(-1) !== '/') {
+      path = ''
     }
 
     // create send stream
     var stream = send(req, path, opts)
 
     // add directory handler
-    stream.on(&#x27;directory&#x27;, onDirectory)
+    stream.on('directory', onDirectory)
 
     // add headers listener
     if (setHeaders) {
-      stream.on(&#x27;headers&#x27;, setHeaders)
+      stream.on('headers', setHeaders)
     }
 
     // add file listener for fallthrough
     if (fallthrough) {
-      stream.on(&#x27;file&#x27;, function onFile () {
+      stream.on('file', function onFile () {
         // once file is determined, always forward error
         forwardError = true
       })
     }
 
     // forward errors
-    stream.on(&#x27;error&#x27;, function error (err) {
-      if (forwardError || !(err.statusCode &#x3c; 500)) {
+    stream.on('error', function error (err) {
+      if (forwardError || !(err.statusCode &lt; 500)) {
         next(err)
         return
       }
@@ -11561,13 +11554,13 @@ _createClass(Server, [{
   app.use((0, _methodOverride2.default)());
   app.use(_express2.default.query());
   app.use((0, _cors2.default)());
-  app.disable(&#x27;x-powered-by&#x27;);
+  app.disable('x-powered-by');
   return app;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   }
 }, {
-  key: &#x27;resource&#x27;,
+  key: 'resource',
   value: function resource(name, model) {
     if (model === undefined) {
       return this._resources.name;
@@ -11577,9 +11570,9 @@ _createClass(Server, [{
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
+    var app = this.get('app');
 ...</pre></li>
     </ul>
 
@@ -11612,14 +11605,14 @@ _createClass(Server, [{
   // TODO: Infact, resources is a mongooseModel instance, origin name is repositories.
   // Should mix _resources object and resources object: _resources + resource = resources.
   // Encapsulation to a object, separate mognoose, try to use *repository pattern*.
-  // 这里也许应该让 resources 支持 odata 查询的, 以方便直接在代码中使用 OData 查询方式来进行数据筛选, 达到隔离 mongo 的效果.
+  // è¿™é‡Œä¹Ÿè®¸åº”è¯¥è®© resources æ”¯æŒ odata æŸ¥è¯¢çš„, ä»¥æ–¹ä¾¿ç›´æŽ¥åœ¨ä»£ç&nbsp;ä¸­ä½¿ç”¨ OData æŸ¥è¯¢æ–¹å¼æ¥è¿›è¡Œæ•°æ®ç­›é€‰, è¾¾åˆ°éš”ç¦» mongo çš„æ•ˆæžœ.
   this._resources = [];
   this.resources = {};
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   }
 }, {
-  key: &#x27;resource&#x27;,
+  key: 'resource',
   value: function resource(name, model) {
     if (model === undefined) {
       return this._resources.name;
@@ -11629,9 +11622,9 @@ _createClass(Server, [{
     return resource;
   }
 }, {
-  key: &#x27;post&#x27;,
+  key: 'post',
   value: function post(url, callback, auth) {
-    var app = this.get(&#x27;app&#x27;);
+    var app = this.get('app');
 ...</pre></li>
     </ul>
 
@@ -11673,7 +11666,7 @@ _createClass(Server, [{
   }).filter(function (item) {
     return Number.isInteger(item);
   }).reduce(function (current, next) {
-    return current &#x3c; next ? current : next;
+    return current &lt; next ? current : next;
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -11689,7 +11682,7 @@ _createClass(Server, [{
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function split(sentence) {
-  var keys = arguments.length &#x3c;= 1 || arguments[1] === undefined ? [] : arguments[1];
+  var keys = arguments.length &lt;= 1 || arguments[1] === undefined ? [] : arguments[1];
 
   var keysArray = keys;
   if (!(keysArray instanceof Array)) {
@@ -11697,9 +11690,9 @@ _createClass(Server, [{
   }
   var result = [];
   var tmp = [];
-  var words = sentence.split(&#x27; &#x27;);
+  var words = sentence.split(' ');
   words.forEach(function (word) {
-    if (keysArray.indexOf(word) &#x3e; -1) {
+    if (keysArray.indexOf(word) &gt; -1) {
       result.push(merge(tmp));
       result.push(word);
       tmp = [];
@@ -11718,9 +11711,9 @@ if (!(keysArray instanceof Array)) {
 }
 var result = [];
 var tmp = [];
-var words = sentence.<span class="apidocCodeKeywordSpan">split</span>(&#x27; &#x27;);
+var words = sentence.<span class="apidocCodeKeywordSpan">split</span>(' ');
 words.forEach(function (word) {
-  if (keysArray.indexOf(word) &#x3e; -1) {
+  if (keysArray.indexOf(word) &gt; -1) {
     result.push(merge(tmp));
     result.push(word);
     tmp = [];
@@ -11738,3 +11731,4 @@ words.forEach(function (word) {
     ]
 </div>
 </div>
+</body></html>
