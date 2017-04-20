@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "node-odata",
-    "description": "api documentation for [node-odata (v0.7.15)](https://github.com/TossShinHwa/node-odata#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-node-odata.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-odata) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-odata.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-odata)",
+    "description": "#### api documentation for  node-odata (v0.7.15)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-odata.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-odata) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-odata.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-odata)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "node-odata": "*",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.2"
+    "version": "0.0.3"
 }

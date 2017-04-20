@@ -1,4 +1,7 @@
-# api documentation for  [node-odata (v0.7.15)](https://github.com/TossShinHwa/node-odata#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-odata.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-odata) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-odata.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-odata)
+# npmdoc-node-odata
+
+#### api documentation for  node-odata (v0.7.15)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-odata.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-odata) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-odata.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-odata)
+
 #### A module for easily create a REST API based on oData protocol
 
 [![NPM](https://nodei.co/npm/node-odata.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/node-odata)
@@ -18,21 +21,39 @@
 ```json
 
 {
+    "name": "node-odata",
+    "version": "0.7.15",
+    "private": false,
+    "description": "A module for easily create a REST API based on oData protocol",
+    "main": "index.js",
     "author": {
         "name": "Zack"
     },
-    "bugs": {
-        "url": "https://github.com/TossShinHwa/node-odata/issues"
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TossShinHwa/node-odata.git"
     },
+    "engines": {
+        "node": ">=0.12"
+    },
+    "scripts": {
+        "prepublish": "make",
+        "test": "make"
+    },
+    "keywords": [
+        "OData",
+        "REST",
+        "RESTful"
+    ],
+    "license": "MIT",
     "dependencies": {
-        "body-parser": "1.15.2",
-        "cors": "2.7.1",
         "express": "4.14.0",
+        "body-parser": "1.15.2",
         "method-override": "2.3.6",
+        "cors": "2.7.1",
         "mongoose": "4.5.9",
         "node-uuid": "1.4.7"
     },
-    "description": "A module for easily create a REST API based on oData protocol",
     "devDependencies": {
         "babel": "6.5.2",
         "babel-cli": "6.11.4",
@@ -52,44 +73,10 @@
         "istanbul": "1.0.0-alpha.2",
         "mocha": "3.0.2",
         "should": "11.1.0",
-        "should-sinon": "0.0.5",
         "sinon": "1.17.5",
+        "should-sinon": "0.0.5",
         "supertest": "2.0.0"
-    },
-    "directories": {},
-    "dist": {
-        "shasum": "04b06d897598a571d39de5f9e3d4996de602d50a",
-        "tarball": "https://registry.npmjs.org/node-odata/-/node-odata-0.7.15.tgz"
-    },
-    "engines": {
-        "node": ">=0.12"
-    },
-    "gitHead": "e3af9d5c17353b9d7985ae55ec2aa7b4b2f89ebf",
-    "homepage": "https://github.com/TossShinHwa/node-odata#readme",
-    "keywords": [
-        "OData",
-        "REST",
-        "RESTful"
-    ],
-    "license": "MIT",
-    "main": "index.js",
-    "maintainers": [
-        {
-            "name": "zackyang"
-        }
-    ],
-    "name": "node-odata",
-    "optionalDependencies": {},
-    "private": false,
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/TossShinHwa/node-odata.git"
-    },
-    "scripts": {
-        "prepublish": "make",
-        "test": "make"
-    },
-    "version": "0.7.15"
+    }
 }
 ```
 
